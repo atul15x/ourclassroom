@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Our Schools</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/animated.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+		<div class="container">
+			<div class="login-form">
+				 <h2 >Our ClassRoom</h2>
+
+				<form action="Login.php" method="POST">
+					<div class="form">
+						<div class="form-group">
+							<label for="exampleInputEmail">User Name</label>
+							<input type="name" id="usernameLog" class="form-control"  name="username">
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">Password</label>
+							<input class="form-control" type="password" id="passwordLog" name="password">
+						</div>
+
+						<button type="submit" id="login" class="btn btn-primary">Login</button>
+					</div> 
+				</form>
+
+				<div class="sign-up ">
+					<a href="#" data-toggle="modal" data-target="#exampleModalCenter"> Forget Password</a>
+					<p class="left">Not Member?. Then <a href="#" data-toggle="modal" data-target="#exampleModalLong"><p class="animated infinite bounce slow delay-1s"> Sign Up</p></a></p>
+				</div>
+			</div>
+
+			<!-- Sign Up Option -->
+			
+			<!-- Modal -->
+			<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="exampleModalLongTitle">Our ClassRoom</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body" >
+			      		<form action="Signup.php" method="POST">
+					        <div class="sign-up-form">
+								<h2>Sign Up</h2> <br>
+								<div class="form" >
+									<div class="form-group">
+										<input type="name" placeholder="Enter The Full Name" class="form-control" id="name"  name="name">
+									</div>
+									<div class="form-group">
+										<input placeholder="Enter The Password" class="form-control" type="password" id="password" name="password">
+									</div>
+									<div class="form-group">
+										<input placeholder="Enter The UserName" class="form-control" type="name" id="username" name="username">
+									</div>
+									<div class="form-group">
+										<input placeholder="Enter The MobileNumber" class="form-control" type="text" id="mobile" name="mobile" name="mobile">
+									</div>
+									<label class="btn btn-secondary active">
+									    <input type="radio" id="gender" name="gender" value="Male"  autocomplete="off" checked> Male
+									</label>
+									<label class="btn btn-secondary">
+									    <input type="radio" id="gender" name="gender" value="female"  autocomplete="off"> Female
+									</label><br>
+									<div class="form-group">
+									    <label for="exampleFormControlSelect1">College Name</label>
+									    <select id="college" name="college" class="form-control" id="exampleFormControlSelect1">
+									      <option>--</option>
+									      <option  value="Changzhou Light Industry">Changzhou Light Industry</option>
+									    </select>
+									</div>
+									<div class="form-group">
+									    <label for="exampleFormControlSelect1">Department Name</label>
+									    <select id="department" name="department" class="form-control" id="exampleFormControlSelect1">
+									      <option>--</option>
+									      <option value="Computer Technology">Computer Technology</option>
+									      <option  value="International Business">International Business</option>
+									      <option value="Electrical Technology">Electrical Technology</option>
+									      <option value="Hotel Managment">Hotel Managment</option>
+									      <option value="Art & Degital Media">Art & Degital Media</option>
+									    </select>
+									</div>
+								</div> 
+					      </div>
+
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					        <button type="button" id="signup" class="btn btn-primary">Sign Up</button>
+					      </div>
+			  		</form>
+			    </div>
+			  </div>
+			</div>
+		</div>	
+
+
+		<!--Forget Password-->	 
+
+		<!-- Button trigger modal -->
+			<!-- Modal -->
+			<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			  <div class="modal-dialog modal-dialog-centered" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="exampleModalLongTitle">Our ClassRoom</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+			      	<h4>Please Enter Your Email. We Send The Link</h4>
+			        <div class="form-group">
+						<label for="exampleInputEmail">Enter Your Email</label>
+						<input type="name" class="form-control"  name="UserName">
+					</div>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			        <button type="button" class="btn btn-primary">Send</button>
+			      </div>
+			    </div>
+			  </div>
+			</div> 	
+
+
+
+	<script type="text/javascript">
+        
+        $("#signup").click(function(){
+
+            var username = $("#username").val();
+            var password = $("#password").val();
+            var name     = $("#name").val();
+            var mobile 	 = $("#mobile").val();
+            var gender   = $("#gender").val();
+            var college  = $("#college").val();
+            var department =$("#department").val();
+
+
+            if(username == '' || password == '' || name == '' || mobile == '' || gender == '' || college == '' || department == '' )
+            {
+                        swal({
+                              title: "Error!",
+                              text: "Please Fill Up All Form!",
+                              icon: "error",  
+                        }); 
+            }
+
+            else {
+                 swal({
+                              title: "Well Done",
+                              text: "Now You Login",
+                              icon: "success",  
+                        }); 
+
+                 $.ajax({
+                    url:"Signup.php",
+                    method:"POST",
+                    data:{username : username,password : password, name:name , mobile:mobile, gender : gender , college:college , department:department  },
+                 });
+            }
+        })
+    </script>
+
+</body>
+</html>
+
